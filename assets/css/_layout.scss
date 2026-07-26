@@ -1,0 +1,111 @@
+@use './config' as c;
+// ==========================
+// Layout
+// ==========================
+
+// Inner
+// 1360デザイン：約849px → 最大1200px
+.inner-1200 {
+    width: min(80vw, 1200px);
+    margin-inline: auto;
+  @include c.tb {
+    width: 100%;
+    padding-inline: 3em;
+  }
+    @include c.sp {
+        padding-inline: 1em;
+
+    }
+}
+
+// 1360デザイン：約778px → 最大1100px
+.inner-1100 {
+    width: min(57.29vw, 1100px);
+    margin-inline: auto;
+}
+
+// 1360デザイン：約708px → 最大1000px
+.inner-1000 {
+    width: min(52.08vw, 1000px);
+    margin-inline: auto;
+}
+
+// 1360デザイン：約566px → 最大800px
+.inner-800 {
+    width: min(41.67vw, 800px);
+    margin-inline: auto;
+}
+
+
+// 1360デザイン：約496px → 最大700px
+.inner-700 {
+    width: min(36.45vw, 700px);
+    margin-inline: auto;
+}
+
+// 1360デザイン：約425px → 最大600px
+
+.inner-600 {
+    width: min(31.25vw, 600px);
+    margin-inline: auto;
+}
+
+// 左寄せ・右寄せ用
+.inner-600-nm {
+    width: min(31.25vw, 600px);
+}
+
+// Width
+.w-100 {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-inline: auto;
+}
+
+.w-95 {
+    width: 95% !important;
+    max-width: 95% !important;
+    margin-inline: auto;
+}
+
+@media (max-width: 768.98px) {
+    .w-95 {
+        width: 95% !important;
+        max-width: 95% !important;
+        margin-inline: auto;
+    }
+}
+
+.w-90 {
+    width: 90% !important;
+    max-width: 90% !important;
+    margin-inline: auto;
+}
+
+.w-85 {
+    width: 85% !important;
+    max-width: 85% !important;
+    margin-inline: auto;
+  @include c.tb {
+width: 100% !important;
+  }
+
+}
+
+.w-80 {
+    width: 80% !important;
+    max-width: 80% !important;
+    margin-inline: auto;
+
+   @include c.tb {
+        width: 95% !important;
+        max-width: 100% !important;
+        margin-inline: auto;
+    }
+}
+
+.w-50 {
+    width: 50% !important;
+    max-width: 50% !important;
+    margin-inline: auto;
+}

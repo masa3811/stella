@@ -1,0 +1,448 @@
+// 変数
+
+// カラー
+
+$white: #fff;
+$black: #000;
+$lightgray: #f2f2f2;
+$gray: #999;
+$darkgray: #333;
+$navy: #1d3557;
+$blue: #0d6efd;
+$lightblue: #dbeafe;
+$green: #198754;
+$lightgreen: #d1e7dd;
+$yellow: #ffd446;
+$lightyellow: #fff2c7;
+$gold: #c8a24a;
+$orange: #fbb03b;
+$red: #dc3545;
+$magenta: #d63384;
+$pink: #f8bbd9;
+$brown: #8b5e3c;
+$beige: #fff2c7;
+
+
+// フォント変数
+$font-sans: 'Noto Sans JP', 'Sawarabi Gothic', sans-serif; // 日本語ゴシック
+$font-serif: 'Noto Serif JP', 'Sawarabi Mincho', serif; // 日本語明朝
+$font-rounded: 'M PLUS Rounded 1c', 'Sawarabi Gothic', sans-serif; // 丸ゴシック
+$font-roboto: 'Roboto', sans-serif; // 欧文用
+$font-title: 'Roboto', sans-serif;
+
+
+// リセット・共通
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-sans;
+  color: $darkgray;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  a:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
+}
+
+p {
+  font-size: 16px;
+  line-height: 2;
+}
+
+@media (max-width: 600px) {
+  p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+  font-size: clamp(0.813rem, 0.79rem + 0.11vw, 0.875rem);
+  line-height: 1.8;
+}
+
+th,
+td {
+  font-size: clamp(0.813rem, 0.79rem + 0.11vw, 0.875rem);
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.flex {
+  display: flex;
+}
+
+.wsnr {
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .pd-1 {
+    padding: 0 1em;
+  }
+}
+
+// ==========================
+// 余白
+// ==========================
+
+// 要素間
+$space-xsm: 5px;
+$space-ssm: 10px;
+$space-sm: 20px;
+$space-md: 40px;
+$space-lg: 60px;
+$space-xl: 100px;
+
+
+// セクション間
+$section-gap: 100px;
+$section-gap-sp: 50px;
+
+
+/* === デバイス別ミックスイン === */
+
+@mixin ssp {
+  @media (max-width: 430px) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media (max-width: 640px) {
+    @content;
+  }
+}
+
+@mixin tb {
+  @media (max-width:920px) {
+    @content;
+  }
+}
+
+@mixin ipad {
+  @media (max-width:913px) and (max-width:1024px){
+    @content;
+  }
+}
+
+@mixin pc {
+  @media (max-width: 1025px) {
+    @content;
+  }
+}
+
+@mixin pc-w {
+  @media (min-width: 1201px) {
+    @content;
+  }
+}
+
+/*　iPad　*/
+@media (min-width: 641px) and (max-width: 768px) {}
+
+/*　iPad Air 縦　820px*/
+@media (min-width:769px) and (max-width:912px) {}
+
+/*　iPad Pro　*/
+@media (min-width:913px) and (max-width:1024px) {}
+
+/*　Galaxy Fold　*/
+@media (max-width: 280px) {}
+
+
+/* === デバイス別表示用クラス === */
+.sp-only,
+.tb-only,
+.pc-only {
+  display: none;
+}
+
+@media (max-width: 620px) {
+  .sp-only {
+    display: block;
+  }
+
+  .tb-only,
+  .pc-only {
+    display: none;
+  }
+}
+
+@media (min-width: 621px) and (max-width: 1023px) {
+  .tb-only {
+    display: block;
+  }
+
+  .sp-only,
+  .pc-only {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .pc-only {
+    display: block;
+  }
+
+  .sp-only,
+  .tb-only {
+    display: none;
+  }
+}
+
+// ==========================
+// トップに戻るボタン
+// ==========================
+body #to-top {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: #333;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 17px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 8px solid #fff;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 10px;
+    background-color: #fff;
+  }
+
+  &.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  &:hover {
+    background: #555;
+    transform: translateY(-4px);
+  }
+}
+// レイアウト
+$header-height: 60px;
+$footer-height: 200px;
+$max-width: 1920px;
+
+// Transition
+$transition-speed: .3s;
+$transition-ease: ease;
+
+// ==========================
+// Shadow
+// ==========================
+
+$shadow-sm: 0 2px 10px rgba(0, 0, 0, .05);
+$shadow-md: 0 4px 15px rgba(0, 0, 0, .05);
+$shadow-lg: 0 5px 15px rgba(0, 0, 0, .15);
+
+
+/* アニメーション----------- */
+/* ホバーで拡大する共通クラス */
+.hover-scale {
+  display: inline-block;
+  /* 必要に応じて調整 */
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+  /* 少し拡大 */
+}
+
+/* 共通スクロールアニメーション */
+
+/* 左からイン */
+.left-in {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.6s ease;
+}
+
+/* 右からイン */
+.right-in {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.6s ease;
+}
+
+/* 下からイン */
+.up-in {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease;
+}
+
+/* 表示時 */
+.left-in.show,
+.right-in.show,
+.up-in.show {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
+
+
+// テーブル用カラー
+$table-bg: #fff;
+$table-border: #727171;
+$table-text: #333;
+
+// テーブル用フォント・サイズ
+$table-font-size: 16px;
+$table-line-height: 1.8;
+
+// テーブル用パディング
+$table-th-padding: 1em 0 1em 4em;
+$table-td-padding: 1em 0;
+
+/* ベース */
+table.table {
+  width: 100%;
+  text-align: left;
+  border-spacing: 10px;
+  background-color: $table-bg;
+
+  th {
+    padding: $table-th-padding;
+    border: 1px $table-border dotted;
+    border-width: 1px 0;
+    line-height: $table-line-height;
+    text-align: center;
+    vertical-align: top;
+    font-size: $table-font-size;
+    font-weight: normal;
+    width: 35%;
+
+    a {
+      text-decoration: none;
+      color: $table-text;
+    }
+  }
+
+  td {
+    padding: $table-td-padding;
+    border: 1px $table-border dotted;
+    border-width: 1px 0;
+    line-height: $table-line-height;
+    text-align: left;
+    vertical-align: middle;
+    background-color: $table-bg;
+    word-break: break-all;
+    font-size: $table-font-size;
+  }
+}
+
+/* ----------------------
+   データ用
+---------------------- */
+.table--data {
+  th {
+    background-color: $darkgray;
+    color: $white;
+  }
+
+  // 小画面は横スクロール
+  @media (max-width: 768px) {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+
+/* ----------------------
+   フォーム用
+---------------------- */
+.table--form {
+  th {
+    text-align: right;
+    vertical-align: middle;
+    background-color: #f9f9f9;
+  }
+
+  td {
+    background-color: $table-bg;
+  }
+
+  input,
+  textarea,
+  select {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    border: 1px solid $table-border;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+
+  // スマホでは縦並び
+  @media (max-width: 768px) {
+
+    th,
+    td {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+
+    th {
+      margin-top: 10px;
+      background: none;
+    }
+  }
+}
