@@ -441,21 +441,23 @@ header {
 
 
   // TOP
-  &__top {
-    position: absolute;
-    top: 0;
-    right: 11vw;
+ &__top {
+  position: absolute;
+  top: 0;
+  right: 11vw;
 
-
-    @include c.ipad() {
-      right: 10vw;
-    }
-
-    @include c.tb() {
-      right: 5vw;
-    }
+  @media (min-width: 1600px) {
+    right: 18vw;
   }
 
+  @include c.ipad() {
+    right: 10vw;
+  }
+
+  @include c.tb() {
+    right: 5vw;
+  }
+}
 
 
   &__top-btn {

@@ -1272,6 +1272,11 @@ header .logo img {
   top: 0;
   right: 11vw;
 }
+@media (min-width: 1600px) {
+  .footer__top {
+    right: 18vw;
+  }
+}
 @media (max-width: 913px) and (max-width: 1024px) {
   .footer__top {
     right: 10vw;
