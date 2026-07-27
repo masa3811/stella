@@ -1,47 +1,37 @@
 @use './config' as c;
 @use './common' as co;
 @use './layout' as l;
-
+/* 施工実績 */
 #works-detail {
     .kv-wrap {
         position: relative;
         background: c.$lightgray;
         height: 250px;
         margin-top: 5rem;
-
         @include c.sp() {
             height: 200px;
         }
-
         img {
             width: 100%;
             display: block;
             margin-top: 5.3rem;
-
             @media (max-width: 400px) {
                 margin-top: 6rem;
             }
         }
-
-
         .page-ttl {
             position: absolute;
             top: 50%;
             left: 50%;
-
             transform: translate(-50%, 30px);
             text-align: center;
             z-index: 2;
-
             opacity: 0;
             transition: transform 0.8s ease, opacity 0.8s ease;
-
             &.is-animated {
                 transform: translate(-50%, -50%);
                 opacity: 1;
             }
-
-
             h3 {
                 display: inline-block;
                 color: #fff;
@@ -52,112 +42,89 @@
                 line-height: 1.2;
                 padding: 10px 40px;
                 margin: 0;
-
                 @include c.sp() {
                     font-size: 20px;
                 }
             }
-
-
             p {
                 font-size: 36px;
                 color: #333;
                 font-weight: bold;
                 margin: 20px 0 0;
                 line-height: 1.6;
-
                 @include c.sp() {
                     font-size: 18px;
                 }
             }
         }
     }
-
+    /*  施工実績　内容 */
     .works {
         padding: 100px 0;
         margin-bottom: 200px;
-
         @include c.sp() {
             padding: 20px 0;
         }
-
         &__mainimg {
             img {
                 width: 100%;
                 display: block;
             }
         }
-
         &__contents {
             margin-top: 80px;
-
             @include c.sp() {
                 margin-top: 50px;
             }
         }
-
         &__desc {
             justify-content: space-between;
             align-items: flex-start;
             gap: 5%;
             margin-bottom: 100px;
-
             @include c.sp() {
                 flex-direction: column;
             }
         }
-
         &__text {
             width: 45%;
-
             @include c.sp() {
                 width: 100%;
             }
         }
-
         &__before-after {
             width: 50%;
-
             @include c.sp() {
                 width: 100%;
                 margin-top: c.$space-sm;
             }
-
             img {
                 width: 100%;
                 display: block;
             }
-
             .arrow {
                 width: 50%;
                 margin: 25px auto;
             }
         }
-
         &__gallery {
             margin-top: 80px;
         }
-
         &__gallery-item {
             display: flex;
             gap: 24px;
-
             @include c.sp() {
                 flex-direction: column;
             }
-
             &:not(:last-child) {
                 margin-bottom: 80px;
             }
         }
-
         &__gallery-large {
             width: calc(66.666% - 12px);
-
             @include c.sp() {
                 width: 100%;
             }
-
             img {
                 width: 100%;
                 height: 100%;
@@ -165,18 +132,15 @@
                 display: block;
             }
         }
-
         &__gallery-small {
             width: calc(33.333% - 10px);
             display: flex;
             flex-direction: column;
             gap: 20px;
-
             @include c.sp() {
                 width: calc(100% / 2 - 10px);
                 flex-direction: row;
             }
-
             img {
                 width: 100%;
                 flex: 1;
@@ -186,37 +150,28 @@
         }
     }
 }
-
 .works__gallery-item.reverse {
     flex-direction: row-reverse;
 }
-
 .notice {
     background-color: c.$beige;
-
     &__in {
         transform: translateY(-150px);
-
         @include c.sp() {
             transform: translateY(-100px);
-
         }
     }
-
     &__block {
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 100px;
         padding: 0 2em;
-
         @include c.sp() {
             flex-direction: column;
             gap: 50px;
-
         }
     }
-
     &__block-item {
         width: 50%;
         text-align: center;
@@ -224,13 +179,10 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-
         @include c.sp() {
             width: 100%;
-
         }
     }
-
     &__block-info {
         display: flex;
         justify-content: center;
@@ -238,128 +190,98 @@
         flex-direction: column;
         background-color: c.$yellow;
         padding: 70px 10px 20px 0;
-
         @include c.sp() {
             padding: 50px 10px;
-
         }
     }
-
     h4 {
         width: 120%;
         line-height: 1.5;
     }
-
     &__block-desc {
         font-size: 17px;
         text-align: left;
         margin-top: 24px;
         line-height: 1.8;
         color: c.$black;
-
         @include c.sp() {
             white-space: nowrap;
-
         }
     }
-
     .btn-box {
         .btn {
             opacity: 0.2;
         }
     }
-
     .news-list__arrow-box {
         margin-left: auto;
         color: c.$white;
     }
 }
-
 .star__decoration {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     transform: translateY(-120px);
-
     @include c.tb() {
         transform: translateY(-110px);
     }
-
     .star__line {
         width: 1px;
         height: 200px;
         background: #333;
     }
-
     .star__icon {
         width: 70px;
         margin: 15px 0;
     }
-
     @include c.sp() {
         flex-direction: row;
         transform: translateY(0px);
-
         .star__line {
             width: 100px;
             height: 1px;
         }
-
         .star__icon {
             margin: 0 15px;
         }
-
     }
 }
-
-
-
 .redesign {
     position: relative;
     margin-top: 150px;
     z-index: 2;
-
     @include c.sp() {
         margin-top: 80px;
-
     }
-
     .ttl-1 {
         width: 80%;
         margin-inline: auto;
-
         @include c.sp() {
             width: 100%;
-
         }
     }
-
     &__contents {
         padding-top: c.$space-sm;
     }
-
     &__list {
         display: flex;
         justify-content: center;
         align-items: flex-start;
         gap: 40px;
-
         @include c.tb() {
             flex-wrap: wrap;
         }
     }
-
     &__item {
         width: calc(100% / 5);
         flex-direction: column;
         align-items: center;
         gap: 20px;
-
         @include c.tb() {
             width: calc(100% / 3 - 40px);
         }
-
         a {
             display: flex;
             flex-direction: column;
@@ -367,85 +289,62 @@
             gap: 20px;
             color: inherit;
             text-decoration: none;
-
             transition: .3s;
-
             &:hover {
                 opacity: .7;
             }
         }
     }
-
     .blob {
         width: 180px;
-
         img {
             width: 100%;
             height: auto;
             display: block;
         }
     }
-
     &__txt {
         font-size: 18px;
         font-weight: bold;
         text-align: center;
         margin: 0;
     }
-
-
     @include c.ssp() {
-
         &__list {
             gap: 30px 15px;
             flex-wrap: wrap;
         }
-
         &__item {
             width: calc(50% - 15px);
         }
-
         .blob {
             width: 140px;
         }
-
         &__txt {
             font-size: 15px;
         }
     }
 }
-
-
-
 .contact-area {
     margin-top: -150px;
     background-color: c.$lightgray;
     position: relative;
     padding: 180px 0 150px;
-
     @include c.sp() {
         padding: 60px 0 100px;
     }
-
     .inner-600 {
-
-
         @include c.sp() {
             width: 90%;
-
         }
     }
-
     .ttl-1 {
         width: 50%;
         margin: 0 auto 35px;
-
         @include c.sp() {
             width: 70%;
-
         }
     }
-
     &__in {
         position: relative;
         background-color: c.$white;
@@ -455,78 +354,49 @@
         padding: 30px 10px;
         margin-top: 100px;
         z-index: 1;
-
         @include c.sp() {
             margin-top: 150px;
-
         }
     }
-
-
-
     &__list {
         justify-content: center;
         gap: 70px;
     }
-
-
     &__item {
-
-
-
-
         a {
             display: flex;
             flex-direction: column;
             align-items: center;
-
-
             color: inherit;
             text-decoration: none;
-
             transition: .3s;
-
             img {
-                width: 70%;
+                width: 50%;
                 display: block;
             }
-
             p {
                 margin: 0;
                 font-size: 22px;
                 font-weight: bold;
                 letter-spacing: .1em;
             }
-
             &:hover {
                 opacity: .8;
             }
         }
     }
-
-
     @include c.sp() {
-
         padding: 60px 0;
-
         .ttl-1 {
             margin-bottom: 40px;
         }
-
-
         &__list {
-            flex-direction: column;
             align-items: center;
             gap: 40px;
         }
-
-
         &__item {
-
-
             a {
                 gap: 15px;
-
                 p {
                     font-size: 18px;
                 }
@@ -534,51 +404,72 @@
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*  会社概要 */
+#company {
+    .kv-wrap {
+        position: relative;
+        background: c.$beige;
+        height: 250px;
+        margin-top: 5rem;
+        @include c.sp() {
+            height: 200px;
+        }
+        .page-ttl {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 30px);
+            text-align: center;
+            z-index: 2;
+            opacity: 0;
+            transition: transform 0.8s ease, opacity 0.8s ease;
+            &.is-animated {
+                transform: translate(-50%, -50%);
+                opacity: 1;
+            }
+            h3 {
+                display: inline-block;
+                color: c.$black;
+                font-size: 72px;
+                font-weight: bold;
+                letter-spacing: 0.03em;
+                line-height: 1.2;
+                padding: 10px 40px;
+                margin: 0;
+                @include c.sp() {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    /* 会社概要　内容 */
+    .company {
+        &__top {
+            img {
+            }
+        }
+        &__philosophy {
+            &__title {
+            }
+            &__desc {
+            }
+            &__image {
+            }
+        }
+        &__representative {
+        }
+        &__profile {}
+    }
+}
 .news {
     padding: 30px 20px;
     margin-top: 50px;
     margin-bottom: 100px;
-
     @include c.ssp() {
         padding: 0 1em;
     }
-
     .news-list {
         width: 100%;
-
         li {
             display: flex;
             align-items: center;
@@ -586,26 +477,22 @@
             margin-bottom: 10px;
             padding: 10px;
             border-bottom: 1px solid #ccc;
-
             @include c.ssp() {
                 flex-direction: column; // 縦並びに変更
                 align-items: flex-start; // 左寄せ
                 padding: 5px 0;
             }
-
             .date {
                 width: 140px;
                 font-size: 16px;
                 color: #999;
                 flex-shrink: 0; // 固定幅を維持
-
                 @include c.ssp() {
                     width: 100%;
                     margin-bottom: 5px; // 日付とリンクの間に隙間
                     font-size: 15px;
                 }
             }
-
             a {
                 display: flex;
                 justify-content: space-between;
@@ -615,26 +502,21 @@
                 font-size: 16px;
                 flex: 1;
                 min-width: 0;
-
                 @include c.ssp() {
                     width: 100%;
                     font-size: 15px;
                 }
-
                 .arrow {
                     margin-left: 10px;
                     flex-shrink: 0;
                     transition: transform 0.3s;
-
                     @include c.ssp() {
                         margin-left: 0;
                         margin-top: 5px; // 縦並びのときは下に
                     }
                 }
-
                 &:hover {
                     color: #007BFF;
-
                     .arrow::before {
                         transform: translateX(4px);
                     }
@@ -643,28 +525,23 @@
         }
     }
 }
-
 #access {
     padding: 60px 20px;
-
     .inner-1000 {
         width: 90%;
         max-width: 1000px;
         margin: 0 auto;
         box-sizing: border-box;
     }
-
     .access-map {
         width: 100%;
         overflow: hidden; // iframeのはみ出し防止
-
         .map-wrap {
             position: relative;
             width: 100%;
             padding-top: 56.25%; // 16:9 アスペクト比
             overflow: hidden;
             border-radius: 10px;
-
             iframe {
                 position: absolute;
                 top: 0;
@@ -676,40 +553,32 @@
             }
         }
     }
-
     .access-info {
         margin-top: 40px;
-
         h4 {
             font-size: 20px;
             font-weight: bold;
             margin-bottom: 10px;
         }
-
         p {
             line-height: 1.6;
         }
     }
-
     // スマホでの横はみ出し防止
     @media (max-width: 480px) {
         padding: 40px 10px;
         overflow-x: hidden;
-
         .inner-1000 {
             padding: 0;
         }
-
         .access-map {
             margin: 0 -10px;
         }
-
         .access-info {
             text-align: center;
         }
     }
 }
-
 .pages-contents .inner-1000 {
     @media (max-width: 480px) {
         width: 100%;
@@ -717,13 +586,11 @@
         font-size: 15px;
     }
 }
-
 /* サイトマップ全体 */
 .wsp-container {
     max-width: 800px;
     margin: 0 auto;
     padding: 40px 0;
-
     h2 {
         font-size: 24px;
         font-weight: 600;
@@ -731,12 +598,10 @@
         padding-left: 10px;
         border-left: 4px solid #3bb1d3; // アクセントカラー（水色）
     }
-
     ul.wsp-pages-list {
         list-style: none;
         padding-left: 0;
         margin: 0;
-
         li {
             margin-bottom: 12px;
             padding: 10px 15px;
@@ -745,23 +610,19 @@
             border: 1px solid #e2edf1;
             border-radius: 8px;
             transition: 0.3s ease;
-
             a {
                 color: #333;
                 text-decoration: none;
                 font-size: 18px;
                 display: block;
             }
-
             &:hover {
                 background: #e5f4f8;
                 transform: translateX(5px);
             }
-
             &.current_page_item {
                 background: #dff2ff;
                 border-color: #8ac7e9;
-
                 a {
                     font-weight: bold;
                     color: #1678aa;
