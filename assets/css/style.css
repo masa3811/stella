@@ -1270,9 +1270,19 @@ header .logo img {
 .footer__top {
   position: absolute;
   top: 0;
-  right: 11vw;
+  right: 10vw;
+}
+@media (min-width: 1536px) {
+  .footer__top {
+    right: 11vw;
+  }
 }
 @media (min-width: 1600px) {
+  .footer__top {
+    right: 13vw;
+  }
+}
+@media (min-width: 1920px) {
   .footer__top {
     right: 18vw;
   }
