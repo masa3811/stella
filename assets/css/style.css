@@ -1270,7 +1270,7 @@ header .logo img {
 .footer__top {
   position: absolute;
   top: 0;
-  right: 19vw;
+  right: 11vw;
 }
 @media (max-width: 913px) and (max-width: 1024px) {
   .footer__top {
@@ -1333,7 +1333,7 @@ header .logo img {
 }
 .mv .mv-wrap h2 {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   width: 15.625vw;
   transform: translate(-50%, calc(-50% + 80px));
