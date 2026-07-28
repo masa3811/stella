@@ -552,10 +552,22 @@
     // ==========================
 
     .company {
+
+        .inner-1000 {
+          @include c.pc() {
+            width: 100%;
+
+          }
+        }
         &-title {
-            font-size: 46px;
+            font-size: 2.5rem;
             font-weight: bold;
             text-align: left;
+
+            @media (max-width: 1280px) {
+                font-size: 2rem;
+
+            }
 
             @include c.sp() {
                 font-size: 24px;
@@ -623,7 +635,7 @@
 
             &-wrapper {
                 display: flex;
-                align-items: center;
+                align-items: flex-start;
                 justify-content: flex-start;
                 gap: 60px;
 
