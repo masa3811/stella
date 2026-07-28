@@ -21,7 +21,7 @@ a a:hover {
 
 p {
   font-size: 16px;
-  line-height: 2;
+  line-height: 1.7;
 }
 
 @media (max-width: 600px) {
@@ -46,7 +46,16 @@ li {
 
 th,
 td {
-  font-size: clamp(0.813rem, 0.79rem + 0.11vw, 0.875rem);
+  font-size: 16px;
+}
+@media (max-width: 600px) {
+  th th,
+  th td,
+  td th,
+  td td {
+    font-size: 15px;
+    line-height: 1.8;
+  }
 }
 
 button {
@@ -2151,7 +2160,7 @@ header .logo img {
   }
 }
 #company .company-title {
-  font-size: 46px;
+  font-size: 2.5rem;
   font-weight: bold;
   text-align: left;
 }
@@ -2197,7 +2206,7 @@ header .logo img {
 }
 #company .company__greeting-wrapper {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   gap: 60px;
 }
