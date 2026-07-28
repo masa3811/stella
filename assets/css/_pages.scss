@@ -412,7 +412,7 @@
     }
 
     .inner-600 {
-        @include c.sp() {
+        @include c.tb() {
             width: 90%;
         }
     }
