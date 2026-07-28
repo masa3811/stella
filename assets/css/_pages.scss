@@ -638,6 +638,10 @@
                 align-items: flex-start;
                 justify-content: flex-start;
                 gap: 60px;
+               @include c.tb() {
+                  align-items: center
+
+               }
 
                 @include c.sp() {
                     flex-direction: column;
