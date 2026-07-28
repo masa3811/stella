@@ -40,23 +40,8 @@ ul,
 ol,
 li {
   list-style: none;
-  font-size: 16px;
-  line-height: 1.7;
-}
-@media (max-width: 600px) {
-  ul ul,
-  ul ol,
-  ul li,
-  ol ul,
-  ol ol,
-  ol li,
-  li ul,
-  li ol,
-  li li {
-    list-style: none;
-    font-size: 15px;
-    line-height: 1.8;
-  }
+  font-size: clamp(0.813rem, 0.79rem + 0.11vw, 0.875rem);
+  line-height: 1.8;
 }
 
 th,
@@ -2178,6 +2163,11 @@ header .logo img {
   font-size: 2.5rem;
   font-weight: bold;
   text-align: left;
+}
+@media (max-width: 1280px) {
+  #company .company-title {
+    font-size: 2rem;
+  }
 }
 @media (max-width: 640px) {
   #company .company-title {
