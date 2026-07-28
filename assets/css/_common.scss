@@ -1,5 +1,4 @@
 @use './config' as c;
-
 // ==========================
 // 共通セクション
 // ==========================
@@ -8,30 +7,22 @@ html,
 body {
   overflow-x: hidden;
 }
-
 html {
   scroll-behavior: smooth;
 }
-
 main {
   padding: 0;
-
   section {
     margin: 0;
   }
 }
-
 // タイトル用
 $font-ttl: 'Roboto', sans-serif;
-
 // ==========================
 // 共通タイトル
 // ==========================
-
-
 .section-ttl {
   text-align: center;
-
   h3 {
     font-family: $font-ttl;
     color: #c7d0da;
@@ -40,28 +31,20 @@ $font-ttl: 'Roboto', sans-serif;
     letter-spacing: 0.03em;
     line-height: 1.1;
     margin: 0;
-
-
-
     @include c.ssp() {
       font-size: 30px;
-
     }
-
     &::first-letter {
       color: #8fa0b5;
       font-size: 100px;
       font-weight: 600;
       line-height: 0.9;
       vertical-align: bottom;
-
       @include c.ssp() {
         font-size: 55px;
-
       }
     }
   }
-
   p {
     font-size: 36px;
     text-align: left;
@@ -69,294 +52,193 @@ $font-ttl: 'Roboto', sans-serif;
     font-weight: bold;
     margin: 10px 0 0;
     line-height: 1.4;
-
     @include c.ssp() {
       font-size: 20px;
-
     }
   }
-
   &.pages {
-
     h3 {
       font-size: 45px;
-
       @include c.ssp() {
         font-size: 32px;
       }
     }
-
   }
 }
-
 .box-ttl {
   font-size: 36px;
-
   @include c.ssp() {
     font-size: 24px;
-
   }
-
-
-
   &.lg {
     font-size: 45px;
-
     @include c.ssp() {
       font-size: 32px;
     }
   }
 }
-
-
 // ==========================
 // ボタン共通
 // ==========================
-
 .btn-box {
   margin-top: c.$space-xl;
-
   @include c.sp() {
     margin-top: c.$space-lg;
-
   }
-
   img {
     width: 50%;
     margin-left: auto;
   }
-
   &--c {
     text-align: center;
   }
-
   &--l {
     text-align: left;
   }
-
   &--r {
     text-align: right;
   }
-
   @include c.sp() {
     text-align: center;
   }
-
 }
-
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   padding: 15px 40px;
-
   background-color: c.$black;
   color: c.$white;
-
   text-decoration: none;
   font-weight: bold;
   line-height: 1;
-
   transition: c.$transition-speed;
-
-
   &:hover {
     opacity: .85;
   }
-
   &:active {
     transform: translateY(1px);
   }
-
-
   //==========================
   // Size
   //==========================
-
   &--large {
     padding: 30px 40px;
     font-size: 1.5rem;
   }
-
   &--small {
     padding: 10px 25px;
     font-size: .9rem;
   }
-
   //==========================
   // Option
   //==========================
-
   &--block {
     display: flex;
     width: 100%;
   }
-
   &--radius {
     border-radius: 9999px;
   }
-
   &--shadow {
     box-shadow: c.$shadow-md;
   }
-
 }
-
-
-
 // ==========================
 // Arrow
 // ==========================
-
 .arrow {
-
   position: relative;
-
   display: inline-block;
-
   transition: transform c.$transition-speed;
-
-
   // くの字
   &--chevron {
-
     width: 12px;
     height: 12px;
-
-
     &::before {
-
       content: "";
-
       position: absolute;
-
       top: 50%;
       left: 0;
-
       width: 8px;
       height: 8px;
-
       border-top: 2px solid currentColor;
       border-right: 2px solid currentColor;
-
       transform: translateY(-50%) rotate(45deg);
-
     }
-
   }
-
-
-
   // →
   &--line {
-
     width: 18px;
     height: 10px;
-
-
     &::before {
-
       content: "";
-
       position: absolute;
-
       top: 50%;
       left: 0;
-
       width: 18px;
       height: 2px;
-
       background: currentColor;
-
       transform: translateY(-50%);
-
     }
-
-
     &::after {
-
       content: "";
-
       position: absolute;
-
       top: 50%;
       right: 0;
-
       width: 8px;
       height: 8px;
-
       border-top: 2px solid currentColor;
       border-right: 2px solid currentColor;
-
       transform: translateY(-50%) rotate(45deg);
-
     }
-
   }
-
 }
-
-
 .arrow-move {
-
   &:hover {
-
     .arrow {
       transform: translateX(5px);
     }
-
   }
-
 }
-
 // ==========================
 // Button Parts
 // ==========================
-
 // Header Contact
 .btn-contact {
   background: c.$yellow;
   color: c.$black;
-
   &:hover {
     color: c.$yellow;
     background: c.$black;
   }
 }
-
 // More
 .btn-more {
   font-size: 22px;
   text-align: right;
-  padding: 30px;
+  padding: 30px 20px;
   font-size: 20px;
-  width: 300px;
-
+  width: 350px;
   @include c.ssp() {
     width: 90%;
     text-align: center;
     padding: 20px;
     display: block;
     margin: 0 auto;
-
   }
 }
-
 // Entry
 .btn-entry {
   background: c.$red;
   color: c.$white;
 }
-
 // ===============================
 //  Single Post Page Style (SCSS)
 // ===============================
-
 .single {
   padding: 80px 20px;
   background-color: #fafafa;
-
   .inner-800 {
     max-width: 800px;
     margin: 0 auto;
@@ -364,14 +246,10 @@ $font-ttl: 'Roboto', sans-serif;
     padding: 60px;
     border-radius: 16px;
     box-shadow: c.$shadow-md;
-
     @include c.ssp() {
       padding: 20px;
-
-
     }
   }
-
   // タイトル
   .single-title {
     font-size: 2rem;
@@ -380,24 +258,18 @@ $font-ttl: 'Roboto', sans-serif;
     margin-bottom: 12px;
     border-bottom: 2px solid #0078d7;
     padding-bottom: 10px;
-
     @include c.ssp() {
       font-size: 16px;
-
-
     }
   }
-
   // 日付・カテゴリー
   .single-date {
     font-size: 0.9rem;
     color: #888;
     margin-bottom: 8px;
   }
-
   .single-category {
     margin-bottom: 20px;
-
     a {
       display: inline-block;
       background-color: #0078d7;
@@ -407,51 +279,42 @@ $font-ttl: 'Roboto', sans-serif;
       border-radius: 20px;
       text-decoration: none;
       transition: 0.3s;
-
       &:hover {
         background-color: #005fa3;
       }
     }
   }
-
   // アイキャッチ
   .single-thumb {
     margin-bottom: 30px;
-
     img {
       width: 100%;
       height: auto;
       border-radius: 12px;
     }
   }
-
   // 本文
   .single-content {
     font-size: 1rem;
     line-height: 1.9;
     r: c.$darkgray;
-
     h2,
     h3 {
       margin-top: 2em;
       font-weight: bold;
       color: #0078d7;
     }
-
     p {
       margin-bottom: 1.5em;
     }
-
     a {
       color: #0078d7;
       text-decoration: underline;
-
       &:hover {
         color: #005fa3;
       }
     }
   }
-
   // 前後ナビゲーション
   .post-navigation {
     display: flex;
@@ -460,22 +323,18 @@ $font-ttl: 'Roboto', sans-serif;
     border-top: 1px solid #ddd;
     padding-top: 20px;
     font-size: 0.9rem;
-
     a {
       color: #0078d7;
       text-decoration: none;
-
       &:hover {
         text-decoration: underline;
       }
     }
   }
-
   // 一覧へ戻るボタン
   .back-link {
     margin-top: 40px;
     text-align: center;
-
     a {
       display: inline-block;
       padding: 10px 20px;
@@ -484,7 +343,6 @@ $font-ttl: 'Roboto', sans-serif;
       border-radius: 30px;
       text-decoration: none;
       transition: 0.3s;
-
       &:hover {
         background-color: #0078d7;
         color: #fff;
@@ -492,25 +350,20 @@ $font-ttl: 'Roboto', sans-serif;
     }
   }
 }
-
 // ===============================
 //  News Archive Page Style
 // ===============================
-
 .news-archive {
   background-color: #fafafa;
   padding: 80px 20px;
-
   .inner-1000 {
     max-width: 1000px;
     margin: 0 auto;
   }
-
   // セクションタイトル
   .section-ttl {
     text-align: center;
     margin-bottom: 50px;
-
     h3 {
       font-family: c.$font-title;
       font-size: 2rem;
@@ -518,21 +371,18 @@ $font-ttl: 'Roboto', sans-serif;
       color: #0078d7;
       margin-bottom: 8px;
     }
-
     p {
       font-size: 0.95rem;
       color: #555;
       letter-spacing: 0.05em;
     }
   }
-
   // お知らせ一覧
   .news-list {
     background: #fff;
     border-radius: 12px;
     box-shadow: c.$shadow-md;
     padding: 20px 30px;
-
     li {
       display: flex;
       align-items: center;
@@ -541,16 +391,13 @@ $font-ttl: 'Roboto', sans-serif;
       padding: 15px 0;
       font-size: 1rem;
       transition: 0.2s;
-
       &:last-child {
         border-bottom: none;
       }
-
       &:hover {
         transform: translateX(3px);
         background-color: #f9fcff;
       }
-
       .date {
         font-size: 0.9rem;
         color: c.$gray;
@@ -558,8 +405,6 @@ $font-ttl: 'Roboto', sans-serif;
         margin-right: 20px;
         width: 100px;
       }
-
-
       a {
         flex-grow: 1;
         color: #222;
@@ -567,11 +412,9 @@ $font-ttl: 'Roboto', sans-serif;
         display: flex;
         justify-content: space-between;
         align-items: center;
-
         &:hover {
           color: #0078d7;
         }
-
         .arrow {
           display: inline-block;
           width: 6px;
@@ -584,14 +427,12 @@ $font-ttl: 'Roboto', sans-serif;
       }
     }
   }
-
   // ページネーション
   .pagination {
     margin-top: 50px;
     display: flex;
     justify-content: center;
     gap: 8px;
-
     .page-numbers {
       display: inline-block;
       padding: 8px 14px;
@@ -601,12 +442,10 @@ $font-ttl: 'Roboto', sans-serif;
       color: #0078d7;
       font-size: 0.9rem;
       transition: 0.3s;
-
       &:hover {
         background-color: #0078d7;
         color: #fff;
       }
-
       &.current {
         background-color: #0078d7;
         color: #fff;
@@ -615,23 +454,18 @@ $font-ttl: 'Roboto', sans-serif;
     }
   }
 }
-
 @media (max-width: 768px) {
   .news-archive {
     padding: 50px 15px;
-
     .news-list {
       li {
         flex-direction: column;
         align-items: flex-start;
-
         .date {
           margin-bottom: 5px;
         }
-
         a {
           justify-content: flex-start;
-
           .arrow {
             display: none;
           }
@@ -640,31 +474,25 @@ $font-ttl: 'Roboto', sans-serif;
     }
   }
 }
-
-
 .error-404 {
   text-align: center;
   padding: 100px 20px;
-
   .page-title {
     font-size: 28px;
     font-weight: bold;
     margin-bottom: 20px;
     r: c.$darkgray;
   }
-
   p {
     font-size: 16px;
     color: #555;
     margin-bottom: 40px;
   }
-
   .error-btns {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
-
     .btn {
       display: inline-block;
       background-color: c.$black;
@@ -673,25 +501,20 @@ $font-ttl: 'Roboto', sans-serif;
       text-decoration: none;
       border-radius: 5px;
       transition: 0.3s;
-
-
       &:hover {
         opacity: 0.8;
       }
     }
   }
-
   @include c.ssp() {
     .page-title {
       font-size: 22px;
     }
   }
 }
-
 .grecaptcha-badge iframe {
   margin-top: 0;
 }
-
 .pages-contents p {
   letter-spacing: -0.05em;
 }
