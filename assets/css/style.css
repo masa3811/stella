@@ -24,7 +24,7 @@ p {
   line-height: 1.7;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   p {
     font-size: 15px;
     line-height: 1.8;
@@ -48,7 +48,7 @@ th,
 td {
   font-size: 16px;
 }
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   th th,
   th td,
   td th,
@@ -79,7 +79,7 @@ button {
   white-space: nowrap;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   .pd-1 {
     padding: 0 1em;
   }
