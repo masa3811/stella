@@ -554,11 +554,12 @@
     .company {
 
         .inner-1000 {
-          @include c.pc() {
-            width: 100%;
+            @include c.pc() {
+                width: 100%;
 
-          }
+            }
         }
+
         &-title {
             font-size: 2.5rem;
             font-weight: bold;
@@ -566,6 +567,11 @@
 
             @media (max-width: 1280px) {
                 font-size: 2rem;
+
+            }
+
+            @media (max-width: 1024px) {
+                font-size: 1.5rem;
 
             }
 
@@ -638,10 +644,10 @@
                 align-items: flex-start;
                 justify-content: flex-start;
                 gap: 60px;
-               @include c.tb() {
-                  align-items: center
 
-               }
+                @include c.tb() {
+                    align-items: center
+                }
 
                 @include c.sp() {
                     flex-direction: column;
@@ -660,9 +666,16 @@
 
             &-desc {
                 margin-top: 40px;
+
+                @media (max-width: 1280px) {
+                    margin-top: 10px;
+                    font-size: 14px;
+
+                }
             }
 
 
+            
             &-image {
                 width: 40%;
                 text-align: right;
