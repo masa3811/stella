@@ -517,37 +517,40 @@
         margin-top: 5rem;
 
         @include c.sp() {
-            height: 200px;
+            height: 150px;
+
         }
 
         .page-ttl {
             position: absolute;
-            top: 50%;
+            top: 35%;
             left: 50%;
             transform: translate(-50%, 30px);
-            text-align: center;
-            z-index: 2;
             opacity: 0;
             transition: transform 0.8s ease, opacity 0.8s ease;
 
             &.is-animated {
-                transform: translate(-50%, -50%);
+                transform: translate(-50%, 0);
                 opacity: 1;
             }
 
-            h3 {
-                display: inline-block;
-                color: c.$black;
-                font-size: 72px;
-                font-weight: bold;
-                letter-spacing: 0.03em;
-                line-height: 1.2;
-                padding: 10px 40px;
-                margin: 0;
 
-                @include c.sp() {
-                    font-size: 20px;
+            h3 {
+
+
+                img {
+                    display: block;
+                    width: 300px;
+
+                    @include c.sp() {
+                        width: 190px;
+
+                    }
+
+
                 }
+
+
             }
         }
     }
@@ -636,8 +639,9 @@
                     right: -40px;
 
                     @include c.sp() {
-                        top: -20px;
-                        right: -20px;
+                        width: 17vw;
+                        top: 6px;
+                        right: 0px;
                     }
                 }
             }
@@ -650,6 +654,11 @@
 
         &__greeting {
             margin-top: 150px;
+
+            @include c.sp() {
+                margin-top: 80px;
+
+            }
 
 
 
@@ -707,11 +716,11 @@
                 }
 
                 &__position {
-                    text-align: left;
+                    text-align: right;
                 }
 
                 &__name {
-                     text-align: left;
+                    text-align: right;
                 }
             }
         }
@@ -727,6 +736,12 @@
             margin-top: 150px;
             padding: 100px 0;
 
+            @include c.sp() {
+                margin-top: 80px;
+
+            }
+
+
 
             &-table {
                 width: 100%;
@@ -734,39 +749,41 @@
                 border-collapse: collapse;
 
 
-                th,
+                th {
+                    padding: 20px 40px;
+                    border-bottom: 1px solid c.$black;
+                    text-align: left;
+                    width: 30%;
+                    font-weight: bold;
+
+                    @include c.sp() {
+                        display: block;
+                        width: 100%;
+                        padding: 20px 10px;
+                    }
+                }
+
+
                 td {
                     padding: 20px 40px;
                     border-bottom: 1px solid c.$black;
                     text-align: left;
-                }
-
-
-                th {
-                    width: 30%;
-                    font-weight: bold;
-                }
-
-
-                td {
                     width: 70%;
-                }
 
-
-                @include c.sp() {
-
-                    th,
-                    td {
+                    @include c.sp() {
                         display: block;
                         width: 100%;
+                        border-bottom: none;
+                        padding: 20px;
                     }
-
                 }
+
             }
         }
-
     }
+
 }
+
 
 
 
