@@ -2188,10 +2188,20 @@ header .logo img {
 }
 #company .company__top img {
   width: 50%;
-  margin: 100px auto;
+  margin: 100px auto 0;
+}
+@media (max-width: 430px) {
+  #company .company__top img {
+    margin: 50px auto 0;
+  }
 }
 #company .company__concept {
   margin-top: 150px;
+}
+@media (max-width: 430px) {
+  #company .company__concept {
+    margin-top: 80px;
+  }
 }
 #company .company__concept-desc {
   margin-top: 40px;
@@ -2215,7 +2225,7 @@ header .logo img {
 @media (max-width: 640px) {
   #company .company__concept-image .deco-1 {
     top: -20px;
-    left: -20px;
+    right: -20px;
   }
 }
 #company .company__greeting {
@@ -2267,6 +2277,12 @@ header .logo img {
   #company .company__greeting-image {
     width: 100%;
   }
+}
+#company .company__greeting-image__position {
+  text-align: left;
+}
+#company .company__greeting-image__name {
+  text-align: left;
 }
 #company .company__profile {
   background-color: #fff2c7;

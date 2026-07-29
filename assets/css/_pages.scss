@@ -706,9 +706,13 @@
                     width: 100%;
                 }
 
-                &__position {}
+                &__position {
+                    text-align: left;
+                }
 
-                &__name {}
+                &__name {
+                     text-align: left;
+                }
             }
         }
 
