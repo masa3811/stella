@@ -2247,7 +2247,7 @@ header .logo img {
 #company .company__greeting-desc {
   margin-top: 40px;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1200px) {
   #company .company__greeting-desc {
     margin-top: 10px;
     font-size: 14px;
