@@ -645,8 +645,10 @@
                 justify-content: flex-start;
                 gap: 60px;
 
-                @include c.tb() {
-                    align-items: center
+
+
+                @media (max-width: 920px) {
+                    align-items: left;
                 }
 
                 @include c.sp() {
