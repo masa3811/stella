@@ -2004,9 +2004,6 @@ header .logo img {
 .redesign__item a:hover {
   opacity: 0.7;
 }
-.redesign .blob {
-  width: 180px;
-}
 .redesign .blob img {
   width: 100%;
   height: auto;
@@ -2017,6 +2014,11 @@ header .logo img {
   font-weight: bold;
   text-align: center;
   margin: 0;
+}
+@media (max-width: 430px) {
+  .redesign__txt {
+    font-size: 15px;
+  }
 }
 @media (max-width: 430px) {
   .redesign__list {
@@ -2174,7 +2176,7 @@ header .logo img {
     font-size: 2rem;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
   #company .company-title {
     font-size: 1.5rem;
   }
@@ -2227,7 +2229,7 @@ header .logo img {
 }
 @media (max-width: 920px) {
   #company .company__greeting-wrapper {
-    align-items: center;
+    align-items: left;
   }
 }
 @media (max-width: 640px) {
@@ -2247,7 +2249,7 @@ header .logo img {
 #company .company__greeting-desc {
   margin-top: 40px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1280px) {
   #company .company__greeting-desc {
     margin-top: 10px;
     font-size: 14px;
