@@ -589,7 +589,12 @@
         &__top {
             img {
                 width: 50%;
-                margin: 100px auto;
+                margin: 100px auto 0;
+
+                @include c.ssp() {
+                    margin: 50px auto 0;
+
+                }
             }
         }
 
@@ -601,7 +606,10 @@
         &__concept {
             margin-top: 150px;
 
+            @include c.ssp() {
+                margin-top: 80px;
 
+            }
 
 
 
@@ -629,7 +637,7 @@
 
                     @include c.sp() {
                         top: -20px;
-                        left: -20px;
+                        right: -20px;
                     }
                 }
             }
