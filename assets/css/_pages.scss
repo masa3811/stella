@@ -365,7 +365,7 @@
     }
 
     .blob {
-        
+
 
         img {
             width: 100%;
@@ -379,10 +379,11 @@
         font-weight: bold;
         text-align: center;
         margin: 0;
-          @include c.ssp() {
-            font-size: 185px;
 
-          }
+        @include c.ssp() {
+            font-size: 15px;
+
+        }
     }
 
     @include c.ssp() {
