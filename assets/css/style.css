@@ -2045,7 +2045,7 @@ header .logo img {
     padding: 60px 0 100px;
   }
 }
-@media (max-width: 640px) {
+@media (max-width: 920px) {
   .contact-area .inner-600 {
     width: 90%;
   }
@@ -2092,7 +2092,7 @@ header .logo img {
 }
 .contact-area__item a p {
   margin: 0;
-  font-size: 22px;
+  font-size: 17px;
   font-weight: bold;
   letter-spacing: 0.1em;
 }
@@ -2159,6 +2159,11 @@ header .logo img {
     font-size: 20px;
   }
 }
+@media (max-width: 1025px) {
+  #company .company .inner-1000 {
+    width: 100%;
+  }
+}
 #company .company-title {
   font-size: 2.5rem;
   font-weight: bold;
@@ -2167,6 +2172,11 @@ header .logo img {
 @media (max-width: 1280px) {
   #company .company-title {
     font-size: 2rem;
+  }
+}
+@media (max-width: 1024px) {
+  #company .company-title {
+    font-size: 1.5rem;
   }
 }
 @media (max-width: 640px) {
@@ -2215,6 +2225,11 @@ header .logo img {
   justify-content: flex-start;
   gap: 60px;
 }
+@media (max-width: 920px) {
+  #company .company__greeting-wrapper {
+    align-items: center;
+  }
+}
 @media (max-width: 640px) {
   #company .company__greeting-wrapper {
     flex-direction: column;
@@ -2231,6 +2246,12 @@ header .logo img {
 }
 #company .company__greeting-desc {
   margin-top: 40px;
+}
+@media (max-width: 1280px) {
+  #company .company__greeting-desc {
+    margin-top: 10px;
+    font-size: 14px;
+  }
 }
 #company .company__greeting-image {
   width: 40%;
