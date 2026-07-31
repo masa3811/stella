@@ -91,17 +91,16 @@ window.addEventListener('resize', animateMvText);
 
 // kvのタイトル位置-----
 function animateSectionTitle() {
-  const sectionTitle = document.querySelector('.kv .page-ttl');
+  const sectionTitle = document.querySelector(".kv .page-ttl");
 
   if (!sectionTitle) return;
 
   requestAnimationFrame(() => {
-    sectionTitle.classList.add('is-animated');
+    sectionTitle.classList.add("is-animated");
   });
 }
 
-// ページ読み込み時
-window.addEventListener('load', animateSectionTitle);
+window.addEventListener("load", animateSectionTitle);
 
 /* --------------------------------
  */

@@ -407,6 +407,7 @@
     }
 }
 
+
 .contact-area {
     margin-top: -150px;
     background-color: c.$lightgray;
@@ -424,12 +425,14 @@
     }
 
     .ttl-1 {
-        width: 50%;
+        width: 80%;
         margin: 0 auto 35px;
+        font-family: "GenJyuuGothic";
+        font-size: 3rem;
+        font-weight: 700;
+        text-align: center;
 
-        @include c.sp() {
-            width: 70%;
-        }
+        @include c.tb() {}
     }
 
     &__in {
@@ -462,8 +465,9 @@
             transition: .3s;
 
             img {
-                width: 50%;
+                width: 100%;
                 display: block;
+                max-width: 80px;
             }
 
             p {
@@ -503,8 +507,9 @@
     }
 }
 
-/*  会社概要 */
-#company {
+/*  会社概要 事業内容　タイトル */
+#company,
+#business {
 
     // ==========================
     // KV
@@ -682,7 +687,7 @@
 
 
             &-body {
-                width: 55%;
+                width: 100%;
 
                 @include c.sp() {
                     width: 100%;
@@ -784,10 +789,57 @@
 
 }
 
+/* 事業内容 */
+#business {
 
+    .business {
 
+        &__content {
+            display: flex;
 
+            &-title {
+                width: 50%;
+                font-size: 50px;
+            }
 
+            &-text {
+                font-size: 30px;
+                font-weight: bold;
+            }
+        }
+
+        &__card {
+            display: flex;
+            gap: 50px;
+            margin-top: 100px;
+
+            &-image {
+                width: 50%;
+            }
+
+            &-content {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            &-title {
+                font-size: 20px;
+            }
+
+            &-text {
+                font-size: 16px;
+            }
+
+            &--reverse {
+                flex-direction: row-reverse;
+            }
+        }
+
+    }
+
+}
 
 
 

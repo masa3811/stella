@@ -2053,13 +2053,12 @@ header .logo img {
   }
 }
 .contact-area .ttl-1 {
-  width: 50%;
+  width: 80%;
   margin: 0 auto 35px;
-}
-@media (max-width: 640px) {
-  .contact-area .ttl-1 {
-    width: 70%;
-  }
+  font-family: "GenJyuuGothic";
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
 }
 .contact-area__in {
   position: relative;
@@ -2089,8 +2088,9 @@ header .logo img {
   transition: 0.3s;
 }
 .contact-area__item a img {
-  width: 50%;
+  width: 100%;
   display: block;
+  max-width: 80px;
 }
 .contact-area__item a p {
   margin: 0;
@@ -2120,19 +2120,22 @@ header .logo img {
   }
 }
 
-/*  会社概要 */
-#company .kv-wrap {
+/*  会社概要 事業内容　タイトル */
+#company .kv-wrap,
+#business .kv-wrap {
   position: relative;
   background: #fff2c7;
   height: 250px;
   margin-top: 5rem;
 }
 @media (max-width: 640px) {
-  #company .kv-wrap {
+  #company .kv-wrap,
+  #business .kv-wrap {
     height: 150px;
   }
 }
-#company .kv-wrap .page-ttl {
+#company .kv-wrap .page-ttl,
+#business .kv-wrap .page-ttl {
   position: absolute;
   top: 35%;
   left: 50%;
@@ -2140,164 +2143,199 @@ header .logo img {
   opacity: 0;
   transition: transform 0.8s ease, opacity 0.8s ease;
 }
-#company .kv-wrap .page-ttl.is-animated {
+#company .kv-wrap .page-ttl.is-animated,
+#business .kv-wrap .page-ttl.is-animated {
   transform: translate(-50%, 0);
   opacity: 1;
 }
-#company .kv-wrap .page-ttl h3 img {
+#company .kv-wrap .page-ttl h3 img,
+#business .kv-wrap .page-ttl h3 img {
   display: block;
   width: 300px;
 }
 @media (max-width: 640px) {
-  #company .kv-wrap .page-ttl h3 img {
+  #company .kv-wrap .page-ttl h3 img,
+  #business .kv-wrap .page-ttl h3 img {
     width: 190px;
   }
 }
 @media (max-width: 1025px) {
-  #company .company .inner-1000 {
+  #company .company .inner-1000,
+  #business .company .inner-1000 {
     width: 100%;
   }
 }
-#company .company-title {
+#company .company-title,
+#business .company-title {
   font-size: 2.5rem;
   font-weight: bold;
   text-align: left;
 }
 @media (max-width: 1280px) {
-  #company .company-title {
+  #company .company-title,
+  #business .company-title {
     font-size: 2rem;
   }
 }
 @media (max-width: 1100px) {
-  #company .company-title {
+  #company .company-title,
+  #business .company-title {
     font-size: 1.5rem;
   }
 }
 @media (max-width: 640px) {
-  #company .company-title {
+  #company .company-title,
+  #business .company-title {
     font-size: 24px;
   }
 }
-#company .company__top img {
+#company .company__top img,
+#business .company__top img {
   width: 50%;
   margin: 100px auto 0;
 }
 @media (max-width: 430px) {
-  #company .company__top img {
+  #company .company__top img,
+  #business .company__top img {
     margin: 50px auto 0;
   }
 }
-#company .company__concept {
+#company .company__concept,
+#business .company__concept {
   margin-top: 150px;
 }
 @media (max-width: 430px) {
-  #company .company__concept {
+  #company .company__concept,
+  #business .company__concept {
     margin-top: 80px;
   }
 }
-#company .company__concept-desc {
+#company .company__concept-desc,
+#business .company__concept-desc {
   margin-top: 40px;
   line-height: 2;
   text-align: left;
 }
-#company .company__concept-image {
+#company .company__concept-image,
+#business .company__concept-image {
   position: relative;
   margin-top: 80px;
 }
-#company .company__concept-image img {
+#company .company__concept-image img,
+#business .company__concept-image img {
   width: 100%;
   display: block;
 }
-#company .company__concept-image .deco-1 {
+#company .company__concept-image .deco-1,
+#business .company__concept-image .deco-1 {
   position: absolute;
   width: 12vw;
   top: 75px;
   right: -40px;
 }
 @media (max-width: 640px) {
-  #company .company__concept-image .deco-1 {
+  #company .company__concept-image .deco-1,
+  #business .company__concept-image .deco-1 {
     width: 17vw;
     top: 6px;
     right: 0px;
   }
 }
-#company .company__greeting {
+#company .company__greeting,
+#business .company__greeting {
   margin-top: 150px;
 }
 @media (max-width: 640px) {
-  #company .company__greeting {
+  #company .company__greeting,
+  #business .company__greeting {
     margin-top: 80px;
   }
 }
-#company .company__greeting-wrapper {
+#company .company__greeting-wrapper,
+#business .company__greeting-wrapper {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   gap: 60px;
 }
 @media (max-width: 920px) {
-  #company .company__greeting-wrapper {
+  #company .company__greeting-wrapper,
+  #business .company__greeting-wrapper {
     align-items: left;
   }
 }
 @media (max-width: 640px) {
-  #company .company__greeting-wrapper {
+  #company .company__greeting-wrapper,
+  #business .company__greeting-wrapper {
     flex-direction: column;
     gap: 40px;
   }
 }
-#company .company__greeting-body {
-  width: 55%;
+#company .company__greeting-body,
+#business .company__greeting-body {
+  width: 100%;
 }
 @media (max-width: 640px) {
-  #company .company__greeting-body {
+  #company .company__greeting-body,
+  #business .company__greeting-body {
     width: 100%;
   }
 }
-#company .company__greeting-desc {
+#company .company__greeting-desc,
+#business .company__greeting-desc {
   margin-top: 40px;
 }
 @media (max-width: 1280px) {
-  #company .company__greeting-desc {
+  #company .company__greeting-desc,
+  #business .company__greeting-desc {
     margin-top: 10px;
     font-size: 14px;
   }
 }
-#company .company__greeting-image {
+#company .company__greeting-image,
+#business .company__greeting-image {
   width: 40%;
   text-align: right;
 }
-#company .company__greeting-image img {
+#company .company__greeting-image img,
+#business .company__greeting-image img {
   width: 100%;
   display: block;
 }
 @media (max-width: 640px) {
-  #company .company__greeting-image {
+  #company .company__greeting-image,
+  #business .company__greeting-image {
     width: 100%;
   }
 }
-#company .company__greeting-image__position {
+#company .company__greeting-image__position,
+#business .company__greeting-image__position {
   text-align: right;
 }
-#company .company__greeting-image__name {
+#company .company__greeting-image__name,
+#business .company__greeting-image__name {
   text-align: right;
 }
-#company .company__profile {
+#company .company__profile,
+#business .company__profile {
   background-color: #fff2c7;
   margin-top: 150px;
   padding: 100px 0;
 }
 @media (max-width: 640px) {
-  #company .company__profile {
+  #company .company__profile,
+  #business .company__profile {
     margin-top: 80px;
   }
 }
-#company .company__profile-table {
+#company .company__profile-table,
+#business .company__profile-table {
   width: 100%;
   margin-top: 50px;
   border-collapse: collapse;
 }
-#company .company__profile-table th {
+#company .company__profile-table th,
+#business .company__profile-table th {
   padding: 20px 40px;
   border-bottom: 1px solid #000;
   text-align: left;
@@ -2305,25 +2343,64 @@ header .logo img {
   font-weight: bold;
 }
 @media (max-width: 640px) {
-  #company .company__profile-table th {
+  #company .company__profile-table th,
+  #business .company__profile-table th {
     display: block;
     width: 100%;
     padding: 20px 10px;
   }
 }
-#company .company__profile-table td {
+#company .company__profile-table td,
+#business .company__profile-table td {
   padding: 20px 40px;
   border-bottom: 1px solid #000;
   text-align: left;
   width: 70%;
 }
 @media (max-width: 640px) {
-  #company .company__profile-table td {
+  #company .company__profile-table td,
+  #business .company__profile-table td {
     display: block;
     width: 100%;
     border-bottom: none;
     padding: 20px;
   }
+}
+
+/* 事業内容 */
+#business .business__content {
+  display: flex;
+}
+#business .business__content-title {
+  width: 50%;
+  font-size: 50px;
+}
+#business .business__content-text {
+  font-size: 30px;
+  font-weight: bold;
+}
+#business .business__card {
+  display: flex;
+  gap: 50px;
+  margin-top: 100px;
+}
+#business .business__card-image {
+  width: 50%;
+}
+#business .business__card-content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#business .business__card-title {
+  font-size: 20px;
+}
+#business .business__card-text {
+  font-size: 16px;
+}
+#business .business__card--reverse {
+  flex-direction: row-reverse;
 }
 
 .news {
