@@ -1448,8 +1448,10 @@ header .logo img {
 }
 
 .ttl-1 {
-  width: 30%;
   margin-bottom: 60px;
+}
+.ttl-1 img {
+  width: 50%;
 }
 @media (max-width: 640px) {
   .ttl-1 {
